@@ -343,11 +343,11 @@ function voltage2Display(volt){
 function voltageOutDisplay(volt){
   let text = `${volt} V`;
   ctx.fillStyle = "white";
-  ctx.fillRect(710,250, 90, 30);
+  ctx.fillRect(700,250, 150, 30);
   ctx.fillStyle = "black";
   ctx.font = "small-caps 20px Arial";
   ctx.textBaseline = "middle";
-  ctx.fillText(text,720,260)
+  ctx.fillText(text,710,260)
   ctx.fillStyle = "black";
 }
 
