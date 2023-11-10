@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Solve NITK KCL</title>
+    <title>Solve NITK op</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -45,7 +45,7 @@
           <a href="https://github.com/darshan45672"><img src="images/nitk.svg" alt="Logo" class="logo" /></a>
         </div>
 
-        <h1>Kirchoff's Current law</h1>
+        <h1>Adder using Op-Amp</h1>
       </div>
     </div>
 
@@ -95,9 +95,14 @@
               <h3 class="task-title">Variables</h3>
                 <div class="variables-sections">
                   <div class="var-div">
-                    <label for="voltageSpinner">DC Voltage (V)</label>
-                    <input class="var-spinner" id="voltageSpinner" name="value" />
-                    <div class="var-slider" id="voltageSlider"></div>
+                    <label for="voltage1Spinner">Voltage1 (V)</label>
+                    <input class="var-spinner" id="voltage1Spinner" name="value" />
+                    <div class="var-slider" id="voltage1Slider"></div>
+                  </div>
+                  <div class="var-div">
+                    <label for="voltage2Spinner">Voltage2 (V)</label>
+                    <input class="var-spinner" id="voltage2Spinner" name="value" />
+                    <div class="var-slider" id="voltage2Slider"></div>
                   </div>
                   <div class="var-div">
                     <label for="resistor1Spinner">Resistance R1</label>
@@ -110,9 +115,9 @@
                     <div class="var-slider" id="resistor2Slider"></div>
                   </div>
                   <div class="var-div">
-                    <label for="resistor3Spinner">Resistance R3</label>
-                    <input class="var-spinner" id="resistor3Spinner" name="value" />
-                    <div class="var-slider" id="resistor3Slider"></div>
+                    <label for="resistorfSpinner">Resistance Rf</label>
+                    <input class="var-spinner" id="resistorfSpinner" name="value" />
+                    <div class="var-slider" id="resistorfSlider"></div>
                   </div>
               </div>
             </div>
@@ -123,7 +128,6 @@
                 <div class="control-sections">
                   <button id="simulate-btn" class="button" style="cursor: pointer;" onclick="startSimulation();">Start Simulation</button> 
                   <button id="add-to-table-btn" class="button" style="cursor: pointer;" onclick="addtable();">Add to Table</button>
-                  <button id="add-I1I2-btn" class="button" style="cursor: pointer;" onclick="showvalue()">Add I2+I3</button>
                   <button id="result-btn" class="button" style="cursor: pointer;" onclick="showResult()">Result</button>
                   <p id="message" style="text-align: center; margin-top: 20px;"></p>
                 </div>
@@ -136,39 +140,22 @@
                 <div class="control-sections">
                     <table id="mytable">
                       <tr>
-                        <th>DC Voltage</th>
-                        <th>Current I1</th>
-                        <th>Current I2</th>
-                        <th>Current I3</th>
-                        <th>Current I1 = I2 + I3</th>
+                        <th>V<sub>1</sub></th>
+                        <th>V<sub>2</sub></th>
+                        <th>R<sub>1</sub></th>
+                        <th>R<sub>2</sub></th>
+                        <th>R<sub>f</sub></th>
+                        <th>V<sub>o</sub></th>
                       </tr>
                     </table>
                 </div>
               </div>
           </div>
-          <!-- <div id="calculation-display-div" class="main__task-div">
-            <h3 class="task-title">Calcualtions</h3>
-              <div class="settings-sections">
-                <div class="control-sections">
-                  <p id="p1">I1 = I2 + I3</p>
-                  <!-- <p id="p2">I2 = <span id="i2"></span> mA</p>
-                  <p id="p2">I3  = <span id="i3"></span> mA</p> -->
-                    <!-- <table id="mytable">
-                      <tr>
-                        <th>DC Voltage</th>
-                        <th>Current I1</th>
-                        <th>Current I2</th>
-                        <th>Current I3 = I1 + I2</th>
-                      </tr>
-                    </table> -
-                </div>
-              </div>
-          </div> -->
           <div id="result-display-div" class="main__task-div">
             <h3 class="task-title">Result</h3>
               <div class="settings-sections">
                 <div class="control-sections">
-                  <p id="p3">Since I1 = I2 + I3<br>Kirchoff's Current Law is verified</p>
+                  <p id="p3">We can design an adder using Op-Amp Since, the output voltage V<sub>o</sub> is equal to sum of V<sub>1</sub> and V<sub>2</sub></p>
                 </div>
               </div>
           </div>          
