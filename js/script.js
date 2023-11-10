@@ -1,142 +1,259 @@
 var v1 = v2 = r1 = r2 = rf = v0 = 0;
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
+ctx.strokeStyle = "black";
+ctx.lineWidth = 2;
 
 
 ctx.beginPath();
-ctx.moveTo(150, 182);
-ctx.lineTo(160,158);
+ctx.moveTo(540, 235);
+ctx.lineTo(430, 295);
 ctx.stroke();
 
 ctx.beginPath();
-ctx.moveTo(160, 158);
-ctx.lineTo(170,192);
+ctx.moveTo(540, 235);
+ctx.lineTo(430, 175);
 ctx.stroke();
 
 ctx.beginPath();
-ctx.moveTo(170, 192);
-ctx.lineTo(180,158);
+ctx.moveTo(430, 175);
+ctx.lineTo(430, 295);
+ctx.stroke();
+
+//horizontal
+ctx.beginPath();
+ctx.moveTo(250, 200);
+ctx.lineTo(430, 200);
 ctx.stroke();
 
 ctx.beginPath();
-ctx.moveTo(180, 158);
-ctx.lineTo(190,192);
+ctx.moveTo(540, 235);
+ctx.lineTo(600, 235);
 ctx.stroke();
 
 ctx.beginPath();
-ctx.moveTo(190, 192);
-ctx.lineTo(200,158);
+ctx.moveTo(250, 270);
+ctx.lineTo(430, 270);
 ctx.stroke();
 
 ctx.beginPath();
-ctx.moveTo(200, 158);
-ctx.lineTo(210,192);
+ctx.moveTo(490, 100);
+ctx.lineTo(600, 100);
 ctx.stroke();
 
 ctx.beginPath();
-ctx.moveTo(210, 192);
-ctx.lineTo(220,172);
+ctx.moveTo(420, 100);
+ctx.lineTo(360, 100);
 ctx.stroke();
 
-// line from r1
-
-ctx.beginPath();
-ctx.moveTo(220,172);
-ctx.lineTo(320,172);
+ctx.beginPath();  
+ctx.moveTo(140, 270);
+ctx.lineTo(180, 270);
 ctx.stroke();
 
-ctx.beginPath();
-ctx.moveTo(150,182);
-ctx.lineTo(130,182);
+ctx.beginPath();  
+ctx.moveTo(140, 200);
+ctx.lineTo(180, 200);
 ctx.stroke();
 
-// r2
 
+//opamp
 ctx.beginPath();
-ctx.moveTo(150, 302);
-ctx.lineTo(160,278);
+ctx.moveTo(540, 235);
+ctx.lineTo(430, 295);
 ctx.stroke();
 
 ctx.beginPath();
-ctx.moveTo(160, 278);
-ctx.lineTo(170,302);
+ctx.moveTo(540, 235);
+ctx.lineTo(430, 175);
 ctx.stroke();
 
 ctx.beginPath();
-ctx.moveTo(170, 302);
-ctx.lineTo(180,278);
+ctx.moveTo(430, 175);
+ctx.lineTo(430, 295);
+ctx.stroke();
+
+//vertical
+
+ctx.beginPath();
+ctx.moveTo(360, 100);
+ctx.lineTo(360, 200);
 ctx.stroke();
 
 ctx.beginPath();
-ctx.moveTo(180, 278);
-ctx.lineTo(190,302);
+ctx.moveTo(600, 100);
+ctx.lineTo(600, 235);
 ctx.stroke();
 
 ctx.beginPath();
-ctx.moveTo(190, 302);
-ctx.lineTo(200,278);
+ctx.moveTo(369, 270);
+ctx.lineTo(369, 309);
 ctx.stroke();
 
 ctx.beginPath();
-ctx.moveTo(200, 278);
-ctx.lineTo(210,302);
+ctx.moveTo(369, 385);
+ctx.lineTo(369, 425);
+ctx.stroke();
+
+//resistor1
+
+ctx.beginPath();
+ctx.moveTo(180, 201);
+ctx.lineTo(190,188);
 ctx.stroke();
 
 ctx.beginPath();
-ctx.moveTo(210, 302);
-ctx.lineTo(220,290);
-ctx.stroke();
-
-// r2 line
-
-ctx.beginPath();
-ctx.moveTo(220,290);
-ctx.lineTo(320,290);
+ctx.moveTo(190, 188);
+ctx.lineTo(200,212);
 ctx.stroke();
 
 ctx.beginPath();
-ctx.moveTo(150,302);
-ctx.lineTo(130,302);
-ctx.stroke();
-
-
-
-// rf
-
-ctx.beginPath();
-ctx.moveTo(550, 162);
-ctx.lineTo(560,138);
+ctx.moveTo(200, 212);
+ctx.lineTo(210,188);
 ctx.stroke();
 
 ctx.beginPath();
-ctx.moveTo(560, 138);
-ctx.lineTo(570,172);
+ctx.moveTo(210, 188);
+ctx.lineTo(220,212);
 ctx.stroke();
 
 ctx.beginPath();
-ctx.moveTo(570, 172);
-ctx.lineTo(580,138);
+ctx.moveTo(220, 212);
+ctx.lineTo(230,188);
 ctx.stroke();
 
 ctx.beginPath();
-ctx.moveTo(580, 138);
-ctx.lineTo(590,172);
+ctx.moveTo(230, 188);
+ctx.lineTo(240,212);
 ctx.stroke();
 
 ctx.beginPath();
-ctx.moveTo(590, 172);
-ctx.lineTo(600,138);
+ctx.moveTo(240, 212);
+ctx.lineTo(250,200);
+ctx.stroke();
+
+//resistor2
+
+ctx.beginPath();
+ctx.moveTo(180, 271);
+ctx.lineTo(190,258);
 ctx.stroke();
 
 ctx.beginPath();
-ctx.moveTo(600, 138);
-ctx.lineTo(610,172);
+ctx.moveTo(190, 258);
+ctx.lineTo(200,282);
 ctx.stroke();
 
 ctx.beginPath();
-ctx.moveTo(610, 172);
-ctx.lineTo(620,152);
+ctx.moveTo(200, 282);
+ctx.lineTo(210,258);
 ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(210, 258);
+ctx.lineTo(220,282);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(220, 282);
+ctx.lineTo(230,258);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(230, 258);
+ctx.lineTo(240,282);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(240, 282);
+ctx.lineTo(250,270);
+ctx.stroke();
+
+//resistor3
+
+ctx.beginPath();
+ctx.moveTo(420, 101);
+ctx.lineTo(430,88);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(430, 88);
+ctx.lineTo(440,112);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(440, 112);
+ctx.lineTo(450,88);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(450, 88);
+ctx.lineTo(460,112);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(460, 112);
+ctx.lineTo(470,88);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(470, 88);
+ctx.lineTo(480,112);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(480, 112);
+ctx.lineTo(490,100);
+ctx.stroke();
+
+//ground
+ctx.beginPath();  
+ctx.moveTo(385, 450);
+ctx.lineTo(355, 450);
+ctx.stroke();
+      
+ctx.beginPath();
+ctx.moveTo(380, 455);
+ctx.lineTo(360, 455);
+ctx.stroke();
+      
+ctx.beginPath();
+ctx.moveTo(375, 460);
+ctx.lineTo(365, 460);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(369, 305);
+ctx.lineTo(369, 385);
+ctx.stroke();
+
+// resistor 1 naming
+ctx.font = "bold small-caps 20px Arial";
+ctx.textBaseline = "middle";
+ctx.fillText("r1", 185, 175)
+
+// resistor 2 naming
+ctx.font = "bold small-caps 20px Arial";
+ctx.textBaseline = "middle";
+ctx.fillText("r2", 185, 300)
+
+// resistor 3 naming
+ctx.font = "bold small-caps 20px Arial";
+ctx.textBaseline = "middle";
+ctx.fillText("Rf", 435, 75)
+
+//positive naming
+ctx.font = "bold small-caps 20px Arial";
+ctx.textBaseline = "middle";
+ctx.fillText("+", 435, 200)
+
+//negative naming
+ctx.font = "bold small-caps 20px Arial";
+ctx.textBaseline = "middle";
+ctx.fillText("_", 440, 260)
+
+ctx.fillStyle = "black";
+ctx.fillRect(200,200, 1, 1);
 
 function resistance2Display(res){
   let text = `${res} Ω`;
