@@ -1,3 +1,4 @@
+var v1 = v2 = r1 = r2 = rf = v0 = 0;
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 
@@ -23,7 +24,7 @@ function resistance1Display(res){
   ctx.fillStyle = "black";
 }
 
-function resistance3Display(res){
+function resistancefDisplay(res){
   let text = `${res} Ω`;
   ctx.fillStyle = "white";
   ctx.fillRect(415,300,100,25);
@@ -67,8 +68,8 @@ function varinit() {
 }
 
 function varchange() {
-  $("#voltage1Slider").slider({ max: 300, min: 0, step: 10 });
-  $("#voltage1Spinner").spinner({ max: 300, min: 0, step: 10 });
+  $("#voltage1Slider").slider({ max: 30, min: 0, step: 1 });
+  $("#voltage1Spinner").spinner({ max: 30, min: 0, step: 1 });
 
   $("#voltage1Slider").on("slide", function (e, ui) {
     $("#voltage1Spinner").spinner("value", ui.value);
@@ -84,8 +85,8 @@ function varchange() {
     varchange();
   });
  
-  $("#voltage2Slider").slider({ max: 300, min: 0, step: 10 });
-  $("#voltage2Spinner").spinner({ max: 300, min: 0, step: 10 });
+  $("#voltage2Slider").slider({ max: 30, min: 0, step: 1 });
+  $("#voltage2Spinner").spinner({ max: 30, min: 0, step: 1 });
 
   $("#voltage2Slider").on("slide", function (e, ui) {
     $("#voltage2Spinner").spinner("value", ui.value);
@@ -182,18 +183,64 @@ function varupdate() {
 
   resistance2Display(res2);
   resistance1Display(res1);
-  resistance3Display(res3);
+  resistancefDisplay(resf);
 
+  v1Assign(volt1);
+  v2Assign(volt2);
+  let v0 = ((resf*volt1/res1)+(resf*volt2/res2));
+  // v0Assign(v0);
+
+  if (isNaN(v0) || !isFinite(v0)) {
+    v0Assign(0)    
+  }else{
+    v0Assign(v0);
+  }
+  resis1Assign(res1);
+  resis2Assign(res2);
+  resisfAssign(resf);
+
+// console.log(v0);
 };
 
+function v1Assign(volt) {
+  v1 = volt;
+  // console.log(v1);
+}
+
+function v2Assign(volt) {
+  v2 = volt;
+  // console.log(v1);
+}
+
+function resis1Assign(res) {
+  r1 = res;
+  // console.log(r1);
+}
+
+function resis2Assign(res) {
+  r2 = res;
+  // console.log(r2);
+}
+
+function resisfAssign(res) {
+  rf = res;
+  // console.log(rf);
+}
+
+function v0Assign(volt) {
+  v0 = volt;
+  console.log("v0",v0);
+}
+
+
 function startSimulation(){
-  $('#voltageSlider').slider("enable"); 
+  $('#voltage1Slider').slider("enable");
+  $('#voltage2Slider').slider("enable");
   $('#resistor1Slider').slider("enable"); 
   $('#resistor2Slider').slider("enable"); 
-  $('#resistor3Slider').slider("enable"); 
+  $('#resistorfSlider').slider("enable"); 
   $("#simulate-btn").prop("disabled", true);
   $("#add-to-table-btn").prop("disabled", false);
-  $("#add-I1I2-btn").prop("disabled", false);
   $("#result-btn").prop("disabled", false);
 };
 
@@ -207,14 +254,13 @@ function addtable(){
   var cell5=row.insertCell(4);
   var cell6=row.insertCell(5);
 
-  cell1.innerHTML="voltage";
-  cell2.innerHTML= "i1";
-  cell3.innerHTML= "i2";
-  cell4.innerHTML= "i3";
-  cell5.innerHTML= "i1";
+  cell1.innerHTML= v1;
+  cell2.innerHTML= v2;
+  cell3.innerHTML= r1;
+  cell4.innerHTML= r2;
+  cell5.innerHTML= rf;
   // cell5.classList.add("column-font");
-  cell5.innerHTML="cell5";
-  cell6.innerHTML="cell6";
+  cell6.innerHTML= v0;
 }
 
 function showResult() {
