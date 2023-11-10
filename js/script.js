@@ -255,6 +255,28 @@ ctx.fillText("_", 440, 260)
 ctx.fillStyle = "black";
 ctx.fillRect(200,200, 1, 1);
 
+ctx.fillStyle = "black";
+ctx.fillRect(60,225, 90, 30);
+ctx.fillStyle = "white";
+ctx.fillText("300 V",70,240)
+
+ctx.fillStyle = "black";
+ctx.fillRect(60,300, 90, 30);
+ctx.fillStyle = "white";
+ctx.fillText("300 V",70,315)
+
+ctx.fillStyle = "black";
+ctx.fillRect(220,155, 90, 30);
+
+ctx.fillStyle = "black";
+ctx.fillRect(220,155, 90, 30);
+
+ctx.fillStyle = "black";
+ctx.fillRect(220,285, 90, 30);
+
+ctx.fillStyle = "black";
+ctx.fillRect(470,55, 90, 30);
+
 function resistance2Display(res){
   let text = `${res} Ω`;
   ctx.fillStyle = "white";
