@@ -2,6 +2,142 @@ var v1 = v2 = r1 = r2 = rf = v0 = 0;
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 
+
+ctx.beginPath();
+ctx.moveTo(150, 182);
+ctx.lineTo(160,158);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(160, 158);
+ctx.lineTo(170,192);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(170, 192);
+ctx.lineTo(180,158);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(180, 158);
+ctx.lineTo(190,192);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(190, 192);
+ctx.lineTo(200,158);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(200, 158);
+ctx.lineTo(210,192);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(210, 192);
+ctx.lineTo(220,172);
+ctx.stroke();
+
+// line from r1
+
+ctx.beginPath();
+ctx.moveTo(220,172);
+ctx.lineTo(320,172);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(150,182);
+ctx.lineTo(130,182);
+ctx.stroke();
+
+// r2
+
+ctx.beginPath();
+ctx.moveTo(150, 302);
+ctx.lineTo(160,278);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(160, 278);
+ctx.lineTo(170,302);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(170, 302);
+ctx.lineTo(180,278);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(180, 278);
+ctx.lineTo(190,302);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(190, 302);
+ctx.lineTo(200,278);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(200, 278);
+ctx.lineTo(210,302);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(210, 302);
+ctx.lineTo(220,290);
+ctx.stroke();
+
+// r2 line
+
+ctx.beginPath();
+ctx.moveTo(220,290);
+ctx.lineTo(320,290);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(150,302);
+ctx.lineTo(130,302);
+ctx.stroke();
+
+
+
+// rf
+
+ctx.beginPath();
+ctx.moveTo(550, 162);
+ctx.lineTo(560,138);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(560, 138);
+ctx.lineTo(570,172);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(570, 172);
+ctx.lineTo(580,138);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(580, 138);
+ctx.lineTo(590,172);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(590, 172);
+ctx.lineTo(600,138);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(600, 138);
+ctx.lineTo(610,172);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(610, 172);
+ctx.lineTo(620,152);
+ctx.stroke();
+
 function resistance2Display(res){
   let text = `${res} Ω`;
   ctx.fillStyle = "white";
