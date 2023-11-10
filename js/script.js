@@ -5,21 +5,6 @@ ctx.strokeStyle = "black";
 ctx.lineWidth = 2;
 
 
-ctx.beginPath();
-ctx.moveTo(540, 235);
-ctx.lineTo(430, 295);
-ctx.stroke();
-
-ctx.beginPath();
-ctx.moveTo(540, 235);
-ctx.lineTo(430, 175);
-ctx.stroke();
-
-ctx.beginPath();
-ctx.moveTo(430, 175);
-ctx.lineTo(430, 295);
-ctx.stroke();
-
 //horizontal
 ctx.beginPath();
 ctx.moveTo(250, 200);
@@ -33,6 +18,11 @@ ctx.stroke();
 
 ctx.beginPath();
 ctx.moveTo(250, 270);
+ctx.lineTo(330, 270);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(369, 270);
 ctx.lineTo(430, 270);
 ctx.stroke();
 
@@ -43,7 +33,7 @@ ctx.stroke();
 
 ctx.beginPath();
 ctx.moveTo(420, 100);
-ctx.lineTo(360, 100);
+ctx.lineTo(330, 100);
 ctx.stroke();
 
 ctx.beginPath();  
@@ -76,8 +66,13 @@ ctx.stroke();
 //vertical
 
 ctx.beginPath();
-ctx.moveTo(360, 100);
-ctx.lineTo(360, 200);
+ctx.moveTo(330, 100);
+ctx.lineTo(330, 200);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(330, 200);
+ctx.lineTo(330, 270);
 ctx.stroke();
 
 ctx.beginPath();
@@ -90,10 +85,6 @@ ctx.moveTo(369, 270);
 ctx.lineTo(369, 309);
 ctx.stroke();
 
-ctx.beginPath();
-ctx.moveTo(369, 385);
-ctx.lineTo(369, 425);
-ctx.stroke();
 
 //resistor1
 
@@ -208,18 +199,18 @@ ctx.stroke();
 
 //ground
 ctx.beginPath();  
-ctx.moveTo(385, 450);
-ctx.lineTo(355, 450);
+ctx.moveTo(385, 385);
+ctx.lineTo(355, 385);
 ctx.stroke();
       
 ctx.beginPath();
-ctx.moveTo(380, 455);
-ctx.lineTo(360, 455);
+ctx.moveTo(380, 390);
+ctx.lineTo(360, 390);
 ctx.stroke();
       
 ctx.beginPath();
-ctx.moveTo(375, 460);
-ctx.lineTo(365, 460);
+ctx.moveTo(375, 395);
+ctx.lineTo(365, 395);
 ctx.stroke();
 
 ctx.beginPath();
@@ -240,7 +231,7 @@ ctx.fillText("r2", 185, 300)
 // resistor 3 naming
 ctx.font = "bold small-caps 20px Arial";
 ctx.textBaseline = "middle";
-ctx.fillText("Rf", 435, 75)
+ctx.fillText("r3", 435, 75)
 
 //positive naming
 ctx.font = "bold small-caps 20px Arial";
@@ -252,8 +243,21 @@ ctx.font = "bold small-caps 20px Arial";
 ctx.textBaseline = "middle";
 ctx.fillText("_", 440, 260)
 
-ctx.fillStyle = "black";
-ctx.fillRect(200,200, 1, 1);
+ctx.beginPath();
+ctx.arc(135, 200, 5, 0, 2 * Math.PI);
+ctx.fill();
+ctx.closePath();
+
+ctx.beginPath();
+ctx.arc(135, 270, 5, 0, 2 * Math.PI);
+ctx.fill();
+ctx.closePath();
+
+ctx.fillStyle="red"
+ctx.beginPath();
+ctx.arc(330, 200, 5, 0, 2 * Math.PI);
+ctx.fill();
+ctx.closePath();
 
 function resistance2Display(res){
   let text = `${res} Ω`;
