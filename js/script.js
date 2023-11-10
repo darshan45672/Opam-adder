@@ -1,11 +1,12 @@
 var v1 = v2 = r1 = r2 = rf = v0 = 0;
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
-ctx.strokeStyle = "black";
+ctx.strokeStyle = "red";
 ctx.lineWidth = 2;
 
 
 //horizontal
+
 ctx.beginPath();
 ctx.moveTo(250, 200);
 ctx.lineTo(430, 200);
@@ -13,7 +14,7 @@ ctx.stroke();
 
 ctx.beginPath();
 ctx.moveTo(540, 235);
-ctx.lineTo(600, 235);
+ctx.lineTo(710, 235);
 ctx.stroke();
 
 ctx.beginPath();
@@ -46,7 +47,7 @@ ctx.moveTo(140, 200);
 ctx.lineTo(180, 200);
 ctx.stroke();
 
-
+ctx.strokeStyle = "black";
 //opamp
 ctx.beginPath();
 ctx.moveTo(540, 235);
@@ -63,6 +64,7 @@ ctx.moveTo(430, 175);
 ctx.lineTo(430, 295);
 ctx.stroke();
 
+ctx.strokeStyle = "red";
 //vertical
 
 ctx.beginPath();
@@ -85,7 +87,7 @@ ctx.moveTo(369, 270);
 ctx.lineTo(369, 309);
 ctx.stroke();
 
-
+ctx.strokeStyle = "black";
 //resistor1
 
 ctx.beginPath();
@@ -214,103 +216,171 @@ ctx.lineTo(365, 395);
 ctx.stroke();
 
 ctx.beginPath();
-ctx.moveTo(369, 305);
+ctx.moveTo(369, 275);
 ctx.lineTo(369, 385);
 ctx.stroke();
 
 // resistor 1 naming
 ctx.font = "bold small-caps 20px Arial";
 ctx.textBaseline = "middle";
-ctx.fillText("r1", 185, 175)
+ctx.fillText("R1", 185, 175)
 
 // resistor 2 naming
 ctx.font = "bold small-caps 20px Arial";
 ctx.textBaseline = "middle";
-ctx.fillText("r2", 185, 300)
+ctx.fillText("R2", 185, 300)
 
 // resistor 3 naming
 ctx.font = "bold small-caps 20px Arial";
 ctx.textBaseline = "middle";
-ctx.fillText("r3", 435, 75)
+ctx.fillText("Rf", 435, 75)
+
+//negative naming
+ctx.font = "bold small-caps 25px Arial";
+ctx.textBaseline = "middle";
+ctx.fillText("-", 440, 200)
 
 //positive naming
 ctx.font = "bold small-caps 20px Arial";
 ctx.textBaseline = "middle";
-ctx.fillText("+", 435, 200)
+ctx.fillText("+", 435, 270);
 
-//negative naming
-ctx.font = "bold small-caps 20px Arial";
-ctx.textBaseline = "middle";
-ctx.fillText("_", 440, 260)
-
-ctx.beginPath();
-ctx.arc(135, 200, 5, 0, 2 * Math.PI);
-ctx.fill();
-ctx.closePath();
-
-ctx.beginPath();
-ctx.arc(135, 270, 5, 0, 2 * Math.PI);
-ctx.fill();
-ctx.closePath();
-
-ctx.fillStyle="red"
+ctx.fillStyle="black"
 ctx.beginPath();
 ctx.arc(330, 200, 5, 0, 2 * Math.PI);
 ctx.fill();
 ctx.closePath();
 
-ctx.fillStyle = "black";
-ctx.fillRect(60,225, 90, 30);
-ctx.fillStyle = "white";
-ctx.fillText("300 V",70,240)
+ctx.beginPath();
+ctx.moveTo(715, 294);
+ctx.lineTo(715, 345);
+ctx.stroke();
 
-ctx.fillStyle = "black";
-ctx.fillRect(60,300, 90, 30);
-ctx.fillStyle = "white";
-ctx.fillText("300 V",70,315)
+ctx.beginPath();  
+ctx.moveTo(700, 345);
+ctx.lineTo(730, 345);
+ctx.stroke();
+      
+ctx.beginPath();
+ctx.moveTo(705, 350);
+ctx.lineTo(725, 350);
+ctx.stroke();
+      
+ctx.beginPath();
+ctx.moveTo(710, 355);
+ctx.lineTo(720, 355);
+ctx.stroke();
 
-ctx.fillStyle = "black";
-ctx.fillRect(220,155, 90, 30);
+ctx.beginPath();
+ctx.arc(137, 200, 5, 0, 2 * Math.PI);
+ctx.fillStyle = 'black'; 
+ctx.fill();
 
-ctx.fillStyle = "black";
-ctx.fillRect(220,155, 90, 30);
+ctx.beginPath();
+ctx.arc(137, 270, 5, 0, 2 * Math.PI);
+ctx.fillStyle = 'black'; 
+ctx.fill();
 
-ctx.fillStyle = "black";
-ctx.fillRect(220,285, 90, 30);
+ctx.beginPath();
+ctx.arc(369, 270, 5, 0, 2 * Math.PI);
+ctx.fillStyle = 'black'; 
+ctx.fill();
 
-ctx.fillStyle = "black";
-ctx.fillRect(470,55, 90, 30);
+//voltage v1
+ctx.font = "bold small-caps 20px Arial";
+ctx.textBaseline = "middle";
+ctx.fillText("V1", 105, 200)
 
-function resistance2Display(res){
-  let text = `${res} Ω`;
+//voltage v2
+ctx.font = "bold small-caps 20px Arial";
+ctx.textBaseline = "middle";
+ctx.fillText("V2", 105, 271)
+
+//output voltage
+ctx.font = "bold small-caps 20px Arial";
+ctx.textBaseline = "middle";
+ctx.fillText("Vo", 730, 235)
+
+ctx.beginPath();
+ctx.arc(715, 235, 5, 0, 2 * Math.PI);
+ctx.fillStyle = 'black'; 
+ctx.stroke();
+
+ctx.beginPath();
+ctx.arc(600, 235, 5, 0, 2 * Math.PI);
+ctx.fillStyle = 'black'; 
+ctx.fill();
+
+ctx.beginPath();
+ctx.arc(715, 290, 5, 0, 2 * Math.PI);
+ctx.fillStyle = 'black'; 
+ctx.stroke();
+
+
+function voltage1Display(volt){
+  let text = `${volt} V`;
   ctx.fillStyle = "white";
-  ctx.fillRect(715,300,100,25);
+  ctx.fillRect(90,210, 90, 30);
   ctx.fillStyle = "black";
   ctx.font = "small-caps 20px Arial";
   ctx.textBaseline = "middle";
-  ctx.fillText(text, 730, 310)
+  ctx.fillText(text,100,225)
+  ctx.fillStyle = "black";
+}
+
+
+function voltage2Display(volt){
+  let text = `${volt} V`;
+  ctx.fillStyle = "white";
+  ctx.fillRect(90,280, 90, 30);
+  ctx.fillStyle = "black";
+  ctx.font = "small-caps 20px Arial";
+  ctx.textBaseline = "middle";
+  ctx.fillText(text,100,295)
+  ctx.fillStyle = "black";
+}
+
+function voltageOutDisplay(volt){
+  let text = `${volt} V`;
+  ctx.fillStyle = "white";
+  ctx.fillRect(710,250, 90, 30);
+  ctx.fillStyle = "black";
+  ctx.font = "small-caps 20px Arial";
+  ctx.textBaseline = "middle";
+  ctx.fillText(text,720,260)
+  ctx.fillStyle = "black";
+}
+
+function resistance2Display(res){
+  let text = `= ${res} Ω`;
+  ctx.fillStyle = "white";
+  ctx.fillRect(220,285, 90, 30);
+  ctx.fillStyle = "black";
+  ctx.font = "small-caps 20px Arial";
+  ctx.textBaseline = "middle";
+  ctx.fillText(text,220,300)
   ctx.fillStyle = "black";
 }
 
 function resistance1Display(res){
-  let text = `${res} Ω`;
+  let text = `= ${res} Ω`;
   ctx.fillStyle = "white";
-  ctx.fillRect(155,90,100,25);
+  ctx.fillRect(220,155, 90, 30);
   ctx.fillStyle = "black";
   ctx.font = "small-caps 20px Arial";
   ctx.textBaseline = "middle";
-  ctx.fillText(text, 158, 100)
+  ctx.fillText(text,220,175)
   ctx.fillStyle = "black";
 }
 
 function resistancefDisplay(res){
-  let text = `${res} Ω`;
+  let text = `= ${res} Ω`;
   ctx.fillStyle = "white";
-  ctx.fillRect(415,300,100,25);
+  ctx.fillRect(470,55, 90, 30);
   ctx.fillStyle = "black";
   ctx.font = "small-caps 20px Arial";
   ctx.textBaseline = "middle";
-  ctx.fillText(text, 418, 310);
+  ctx.fillText(text,470, 75)
   ctx.fillStyle = "black";
 }
 
@@ -335,15 +405,19 @@ function varinit() {
   // $("#CsArea").spinner("value", 0.01);
   // $("#Ivalue").spinner("value", 0.01);
 
-  $('#voltage1Slider').slider("disable"); 
+  $('#voltage1Slider').slider("disable");
+  $("#voltage1Spinner").spinner("disable");
   $('#voltage2Slider').slider("disable"); 
+  $("#voltage2Spinner").spinner("disable");
   $('#resistor1Slider').slider("disable"); 
+  $("#resistor1Spinner").spinner("disable");
   $('#resistor2Slider').slider("disable"); 
+  $("#resistor2Spinner").spinner("disable");
   $('#resistorfSlider').slider("disable"); 
+  $("#resistorfSpinner").spinner("disable");
 
   $("#add-to-table-btn").prop("disabled", true);
   $("#result-btn").prop("disabled", true);
-  
 }
 
 function varchange() {
@@ -463,6 +537,8 @@ function varupdate() {
   resistance2Display(res2);
   resistance1Display(res1);
   resistancefDisplay(resf);
+  voltage1Display(volt1);
+  voltage2Display(volt2);
 
   v1Assign(volt1);
   v2Assign(volt2);
@@ -507,8 +583,9 @@ function resisfAssign(res) {
 }
 
 function v0Assign(volt) {
-  v0 = volt;
-  console.log("v0",v0);
+  v0 = volt.toFixed(2);
+  voltageOutDisplay(v0);
+  // console.log("v0",v0);
 }
 
 
@@ -518,9 +595,22 @@ function startSimulation(){
   $('#resistor1Slider').slider("enable"); 
   $('#resistor2Slider').slider("enable"); 
   $('#resistorfSlider').slider("enable"); 
+  $("#voltage1Spinner").spinner("enable");
+  $("#voltage2Spinner").spinner("enable");
+  $("#resistor1Spinner").spinner("enable");
+  $("#resistor2Spinner").spinner("enable");
+  $("#resistorfSpinner").spinner("enable");
   $("#simulate-btn").prop("disabled", true);
   $("#add-to-table-btn").prop("disabled", false);
   $("#result-btn").prop("disabled", false);
+
+  resistance2Display(0);
+  resistance1Display(0);
+  resistancefDisplay(0);
+  voltage1Display(0);
+  voltage2Display(0);
+  v0Assign(0);
+
 };
 
 function addtable(){
@@ -539,7 +629,7 @@ function addtable(){
   cell4.innerHTML= r2;
   cell5.innerHTML= rf;
   // cell5.classList.add("column-font");
-  cell6.innerHTML= v0;
+  cell6.innerHTML= v0
 }
 
 function showResult() {
